@@ -129,7 +129,7 @@ fun RecordListScreen(
 
             LazyColumn(
                 verticalArrangement = Arrangement.spacedBy(12.dp),
-                contentPadding = PaddingValues(bottom = 16.dp)
+                contentPadding = PaddingValues(bottom = 88.dp)
             ) {
                 items(viewModel.records, key = { it.id }) { record ->
                     RecordItem(
