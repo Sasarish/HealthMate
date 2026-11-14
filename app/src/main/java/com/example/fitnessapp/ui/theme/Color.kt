@@ -2,7 +2,7 @@ package com.example.fitnessapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// the main black and white theme
+// the main black and white theme for whole project
 val AppBlack = Color(0xFF000000)
 val AppWhite = Color(0xFFFFFFFF)
 
