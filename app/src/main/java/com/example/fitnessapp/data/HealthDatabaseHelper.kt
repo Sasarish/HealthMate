@@ -103,8 +103,11 @@ class HealthDatabaseHelper(context: Context) :
         val db = readableDatabase
         val cursor = db.query(
             TABLE_NAME, null,
-            "$COL_DATE LIKE ?",             // the ? is replaced by the value below
-            arrayOf("%$dateText%"),         // % means "anything before/after"
+            // the ? is replaced by the value below
+            "$COL_DATE LIKE ?",
+
+            // % means "anything before/after"
+            arrayOf("%$dateText%"),
             null, null,
             "$COL_DATE DESC, $COL_ID DESC"
         )
@@ -135,7 +138,7 @@ class HealthDatabaseHelper(context: Context) :
     }
 
 
-    //turning current row into object
+    //turning current databse row into object
     private fun cursorToRecord(cursor: Cursor): HealthRecord {
         return HealthRecord(
             id = cursor.getInt(cursor.getColumnIndexOrThrow(COL_ID)),

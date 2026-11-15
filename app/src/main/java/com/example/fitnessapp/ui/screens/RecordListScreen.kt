@@ -135,7 +135,8 @@ fun RecordListScreen(
                     RecordItem(
                         record = record,
                         onEditClick = { onEditClick(record) },
-                        onDeleteClick = { recordToDelete = record }  // opens the dialog
+                        // opens the dialog
+                        onDeleteClick = { recordToDelete = record }
                     )
                 }
             }
