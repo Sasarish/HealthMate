@@ -66,7 +66,7 @@ class MainActivity : ComponentActivity() {
                 // showing add/ edit forms id this condition is true
                 var showForm by rememberSaveable { mutableStateOf(false) }
 
-                // When the form is open, back button close the form
+                // When the form is open, mobile's back button close the form
                 BackHandler(enabled = showForm) {
                     showForm = false
                 }
